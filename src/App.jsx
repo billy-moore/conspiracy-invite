@@ -3,10 +3,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 const CONFIG = {
   titleTop: "CONSPIRACY",
   titleBottom: "THEORY PARTY",
-  subtitle: "Enemy of the State vibes. Bring your finest red-string evidence.",
-  dateLine: "Friday • 7:30 PM • February __, 2026",
-  locationLine: "Location: [Your Place / Address / ‘Undisclosed’]",
-  dressLine: "Dress code: Black ops casual (optional). Tinfoil accessories encouraged.",
+  subtitle: "Trust No One. Question Everything.",
+  dateLine: "Friday • 5:30 PM • March 21st, 2026",
+  locationLine: "Location: Hillcrest Fellowship Hall",
+  dressLine: "RSVP and Sign up for a presentation topic. There will be prizes for best overall presentation, most convincing, and a consolation prize for the... least convincing. Bring heavy snacks or something to share. Kids will play in gym.",
   rsvpUrl: "https://www.signupgenius.com/",
   listUrl: "https://forms.gle/",
 };
