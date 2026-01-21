@@ -29,7 +29,8 @@ function DownArrowIcon({ className = "" }) {
 }
 
 function RansomHeader({ children, as: Tag = "h1" }) {
-  const text = String(children).toUpperCase();
+  const text = String(children).toUpperCase().replace(" ", "\u00A0");
+
 
   const letters = useMemo(() => {
     return text.split("").map((ch, idx) => {
