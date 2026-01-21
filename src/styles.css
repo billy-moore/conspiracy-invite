@@ -128,16 +128,23 @@ a{ color: inherit; }
   margin: 0;
   padding: 0;
   line-height: 1.05;
+  font-size: clamp(28px, 9vw, 64px);
+
   letter-spacing: .03em;
   display: inline-block;
   text-shadow: 0 2px 0 rgba(0,0,0,.35);
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  hyphens: none;
 }
 
 
 .ransom-letter{
   display: inline-block;
+  max-width: 100%;
   margin: 0 .08em .12em 0;
-  padding: .08em .16em;
+  padding: .06em .12em;
   border: 1px solid rgba(0,0,0,.35);
   box-shadow: 0 6px 14px rgba(0,0,0,.35);
   color: #111;
