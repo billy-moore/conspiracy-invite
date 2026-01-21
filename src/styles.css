@@ -8,6 +8,57 @@
   --shadow: 0 10px 40px rgba(0,0,0,.55);
 }
 
+@font-face {
+  font-family: "MagazineCutouts";
+  src: url("/fonts/Magazine-Cutouts-Font.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Arrow pinned to bottom of hero */
+.arrowOnly{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.arrowOnly.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stop blinking when clicked */
+.arrowBtn.blink{
+  animation: slowBlink 1.6s ease-in-out infinite;
+}
+
+/* Content hidden until revealed */
+.details.hidden{
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* When revealed, center content like a briefing card */
+.details.revealed{
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 14px 48px;
+  transition: opacity .2s linear, transform .2s linear;
+}
+
 *{ box-sizing: border-box; }
 html, body { height: 100%; }
 body{
@@ -73,6 +124,7 @@ a{ color: inherit; }
 
 /* RANSOM HEADER */
 .ransom{
+  font-family: "MagazineCutouts", system-ui, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.05;
@@ -80,6 +132,7 @@ a{ color: inherit; }
   display: inline-block;
   text-shadow: 0 2px 0 rgba(0,0,0,.35);
 }
+
 
 .ransom-letter{
   display: inline-block;
@@ -257,4 +310,51 @@ a{ color: inherit; }
   .heroContent{ padding: 40px 24px; }
   .subtitle{ font-size: 1.1rem; }
   .card{ padding: 22px 18px; }
+}
+
+/* Arrow pinned to bottom of hero */
+.arrowOnly{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.arrowOnly.visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hide details until revealed */
+.details.hidden{
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+.details.revealed{
+  opacity: 1;
+  pointer-events: auto;
+  height: auto;
+}
+
+/* Center details vertically when revealed */
+.details.revealed{
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 14px 48px;
+}
+
+/* Prevent card from stretching weirdly */
+.card{
+  margin: auto;
 }
