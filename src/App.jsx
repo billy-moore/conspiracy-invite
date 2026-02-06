@@ -7,8 +7,7 @@ const CONFIG = {
   dateLine: "Friday • 5:30 PM • March 21st, 2026",
   locationLine: "Location: Hillcrest Fellowship Hall",
   dressLine: "RSVP and Sign up for a presentation topic. There will be prizes for best overall presentation, most convincing, and a consolation prize for the... least convincing. Bring heavy snacks or something to share. Kids will play in gym.",
-  rsvpUrl: "https://www.signupgenius.com/",
-  listUrl: "https://forms.gle/",
+  rsvpUrl: "https://www.signupgenius.com/go/10C054CADA829A3FAC16-62212232-conspiracy",
 };
 
 function DownArrowIcon({ className = "" }) {
@@ -234,9 +233,6 @@ export default function App() {
           <div className="ctaRow bottom">
             <a className="btn primary" href={CONFIG.rsvpUrl} target="_blank" rel="noreferrer">
               RSVP / SignUp
-            </a>
-            <a className="btn" href={CONFIG.listUrl} target="_blank" rel="noreferrer">
-              Submit Your List
             </a>
           </div>
 
